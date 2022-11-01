@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    </link>
+<link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <div class="veb1">
-        <div class="hisse"></div>
-        <div id="myDIV" class="header">
-            <div class="hisse5">
-                <h2 style="margin:5px;">To Do List</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="yellow"></div>
+            <div class="heading">
+                <h1 class="heading-text">To-Do List</h1>
             </div>
-            <input class="hisse2" type="text" id="myInput" placeholder="Metni daxil edin...">
-            <br>
-            <div class="elave">
-                <ul id="myUL">
-
-                </ul>
+            <div class="sort">
+                <img class="sortup" src="./assets/img/Group 91.png">
+                <img class="sortdown" src="./assets/img/Group 73.png">
             </div>
-            <div class="hisse3">
-                <div onclick="newElement()" class="addBtn">
-                    <button class="plas">+</button>
-                    <a>Elave et</a></div>
+            <div class="text-area">
+                <input type="text" class="input-text">
+                
             </div>
-        </div>
-        <div class="elave">
-            <ul id="myUL">
-
-            </ul>
+            <div class="add">
+                <button class="addbtn">Add</button>
+            </div>
+            <div class="todos" id="list">
+                <div class="todo-item-container">
+                    
+                </div>
+            </div>
         </div>
     </div>
-    <script src="./assets/js/main.js"></script>
-
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/main.js"></script>
 </body>
-
 </html>

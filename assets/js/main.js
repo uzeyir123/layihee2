@@ -1,54 +1,42 @@
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-}
+const textInputField = document.querySelector('.input-text');
+const addButton = document.querySelector('.addbtn');
+const todosContainer = document.querySelector('.todos');
 
 
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
+addButton.addEventListener('click', ()=>{
+    if(textInputField.value.trim().length=='')
+    return;
+    
+    const todoItemContainer = document.createElement('div');
+    todoItemContainer.classList.add('todo-item-container');
+
+    todosContainer.appendChild(todoItemContainer)
+
+    const todoText = document.createElement('p')
+    todoText.id = 'todo-text';
+    todoText.innerText = textInputField.value
+    todoItemContainer.appendChild(todoText)
 
 
-var list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-    }
-}, false);
+    const editButton = document.createElement('button')
+    editButton.id = 'edit';
+    editButton.innerHTML= 'Edit'
+    todoItemContainer.appendChild(editButton)
+    editButton.addEventListener('click', ()=>{
+        textInputField.value = todoText.innerText;
+        const parent = editButton.parentElement
+        parent.parentElement.removeChild(parent);
+    })
 
+    const deleteButton = document.createElement('button')
+    deleteButton.id = 'delete'
+    deleteButton.innerHTML= 'Delete'
+    todoItemContainer.appendChild(deleteButton)
+    deleteButton.addEventListener('click', ()=>{
+        const parent = deleteButton.parentElement;
+        parent.parentElement.removeChild(parent)
+    })
 
-function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("Metni daxil edin");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
+    textInputField.value='';
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-}
+})
