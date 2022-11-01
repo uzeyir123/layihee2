@@ -1,0 +1,57 @@
+body {
+    margin-top: 30%;
+    margin: 155px;
+}
+
+.veb1 {
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    width: 30%;
+    margin: auto;
+    min-height: 250px;
+
+}
+
+.hisse {
+    background-color: yellow;
+    width: 355px;
+    height: 20px;
+    border-radius: 9px;
+}
+
+.addBtn {
+    height: 22px;
+    border-radius: 70px;
+    background-color: #9953f1 ;
+    width: 40%;
+    margin: auto;
+
+}
+
+.hisse5 {
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.hisse2 {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+}
+
+
+
+h2 {
+    font-size: 30px;
+    margin: 50px;
+}
+
+.elave {
+    margin-left: 95px;
+}
+.plas{
+    background-color: #9953f1 ;
+    border-radius: 70px;
+    
+}
